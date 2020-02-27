@@ -1,0 +1,61 @@
+\usepackage[no-math]{fontspec}
+\setmainfont{Linux Libertine O}
+
+\graphicspath{{images/}}
+
+\usepackage{langsci-gb4e}%\noautomath
+\let\eachwordone=\itshape
+\usepackage[textsize=small,backgroundcolor=white]{todonotes}
+\usepackage{soul}
+
+
+\usepackage{booktabs}
+\usepackage{multirow}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\usepackage{makecell}
+
+
+\usepackage{xspace}
+
+\usepackage[width=0.8\textwidth]{caption}
+
+\usepackage{natbib}
+\bibpunct[:~]{(}{)}{,}{a}{}{,}
+\newcommand{\BIBand}{\&}
+\setlength{\bibsep}{0pt}
+\setlength{\bibhang}{2em}
+\bibliographystyle{glossa}
+\renewcommand{\bibsection}{}
+\newcommand\namecite{\citet}
+\newcommand\citeboth{\citealt}
+\newcommand{\quotecite}[1]{\citeauthor{#1}'s (\citeyear{#1})}
+\renewcommand\cite{\citep}
+
+\newcommand{\high}{\textsc{high}\xspace}
+\newcommand{\low}{\textsc{low}\xspace}
+\newcommand{\level}{\textsc{level}\xspace}
+\newcommand{\gloss}[1]{\textsc{\lowercase{#1}}}
+\newcommand{\gl}[1]{\textsc{\lowercase{#1}}}
+\newcommand{\REF}[2][]{(\ref{#2}#1)}
+\newcommand{\tabref}[1]{Table~\ref{tab:#1}}
+\newcommand{\figref}[1]{Figure~\ref{fig:#1}}
+\newcommand{\from}{\textless\xspace}
+
+\usepackage{hyperref}
+%\hypersetup{toclink=all}
+
+
+\makeatletter
+\newenvironment{Abstract}
+    {\list{}{\listparindent 0em%
+    %\setlength{\leftmargin}{<value>} adjust if you need
+    \itemindent\listparindent
+    \rightmargin\leftmargin
+    \parsep\z@ \@plus\p@
+    }%
+    \item\relax}
+    {\endlist}
+\makeatother
+
